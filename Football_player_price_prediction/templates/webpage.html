@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <style>
+     #centre {
+  margin-left: 39%;
+  zoom: 125%;
+
+}
+  input{
+    width: 200px;
+    height: 30px;
+  }
+  select{
+    width: 200px;
+    height: 30px;
+  }
+
+  label{
+    font-size: 20px;
+  }
+    </style>
+  </head>
+<body bgcolor="antiquewhite">
+  <center><h1 style="zoom: 125%; color:brown;">Football Player Price Predictor</h1></center>
+  <div id="centre"> 
+    <form action="/predict" method="POST">
+      <label>Player Name: </label>
+      <input type="text" name="name" style="margin-left: 38px;"> <br><br>
+      <label for = 'club'>Club Name: </label>
+      <select name="club" style="margin-left: 50px;">
+        <option value="Arsenal">Arsenal</option>
+        <option value="Bournemouth">Bournemouth</option>
+        <option value="Brighton+and+Hove">Brighton+and+Hove</option>
+        <option value="Burnley">Burnley</option>
+        <option value="Chelsea">Chelsea</option>
+        <option value="Crystal+Palace">Crystal+Palace</option>
+        <option value="Everton">Everton</option>
+        <option value="Huddersfield">Huddersfield</option>
+        <option value="Leicester+City">Leicester+City</option>
+        <option value="Liverpool">Liverpool</option>
+        <option value="Manchester+City">Manchester+City</option>
+        <option value="Manchester+United">Manchester+United</option>
+        <option value="Newcastle+United">Newcastle+United</option>
+        <option value="Southampton">Southampton</option>
+        <option value="Stoke+City">Stoke+City</option>
+        <option value="Swansea">Swansea</option>
+        <option value="Tottenham">Tottenham</option>
+        <option value="Watford">Watford</option>
+        <option value="West+Brom">West+Brom</option>
+        <option value="West+Ham">West+Ham</option>
+      </select>
+      <br><br>
+      <label>Age (In Years):</label>
+      <input type="number" step="1" min="14" max="50" name="age" style="margin-left: 26px;"> <br><br>
+      <label for="position_cat">Position Category: </label>
+      <select name="position_cat">
+        <option value="Attackers">Attackers</option>
+        <option value="Goalkeeper">Goalkeeper</option>
+        <option value="Midfielders">Midfielders</option>
+        <option value="Defenders">Defenders</option>
+      </select>
+      <br><br>
+      <label>Page Views: </label>
+      <input type="number" step="1" min="0" name="page_views" style="margin-left: 50px;"> <br><br>
+      <label>FPL value: </label>
+      <input type="text" name="fpl_value" style="margin-left: 60px;"> <br><br>
+      <label>FPL sel(%): </label>
+      <input type="text" name="fpl_sel" style="margin-left: 50px;"> <br><br>
+      <label>FPL points: </label>
+      <input type="number" step="1" min="0" name="fpl_points" style="margin-left: 54px;"> <br><br>
+      <label>Big Club: </label>
+      <input type="number" step="1" min="0" max="1" name="big_club" style="margin-left: 68px;"> <br><br>
+      <label>New Foreign: </label>
+      <input type="number" step="1" min="0" max="1" name="new_foreign" style="margin-left: 36px;"> <br><br>
+      <label>New Signing: </label>
+      <input type="number" step="1" min="0" max="1" name="new_signing" style="margin-left: 34px;"> <br><br>
+      <label for = 'position'>Position: </label>
+      <select name="position" style="margin-left: 76px;">
+        <option value="LW">LW</option>
+        <option value="AM">AM</option>
+        <option value="GK">GK</option>
+        <option value="RW">RW</option>
+        <option value="CB">CB</option>
+        <option value="RB">RB</option>
+        <option value="CF">CF</option>
+        <option value="LB">LB</option>
+        <option value="DM">DM</option>
+        <option value="RM">RM</option>
+        <option value="CM">CM</option>
+        <option value="SS">SS</option>
+        <option value="LM">LM</option>
+      </select>
+      <br><br>
+      <label for="region">Region: </label>
+        <select name="region" style="margin-left: 82px;">
+          <option value="Americans">Americans</option>
+          <option value="EU">EU</option>
+          <option value="England">England</option>
+          <option value="Rest of World">Rest of World</option>
+        </select>
+      <br><br>
+      <input type="submit" value="Predict Now"> <input type="reset">
+    </form>
+</div>
+</body>
+</html>
